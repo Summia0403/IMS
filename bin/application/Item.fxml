@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ItemController">
+   <children>
+      <TabPane layoutY="5.0" prefHeight="30.0" prefWidth="313.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Inventory Management Sysytem">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="154.0" />
+            </content>
+          </Tab>
+        </tabs>
+         <padding>
+            <Insets right="30.0" />
+         </padding>
+      </TabPane>
+      <TableView fx:id="itemtab" layoutX="179.0" layoutY="35.0" onSort="#Displaydata" prefHeight="564.0" prefWidth="422.0">
+        <columns>
+          <TableColumn fx:id="dataId" prefWidth="59.99998474121094" text="Id" />
+          <TableColumn fx:id="dataItemName" prefWidth="74.39996337890625" text="Itemname" />
+            <TableColumn fx:id="dataCategory" minWidth="0.0" prefWidth="103.20001220703125" text="Category" />
+            <TableColumn fx:id="dataPrice" prefWidth="76.79995727539062" text="Price" />
+            <TableColumn fx:id="dataQuantity" prefWidth="73.5999755859375" text="Quantity" />
+        </columns>
+      </TableView>
+      <VBox layoutY="35.0" prefHeight="564.0" prefWidth="177.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="202.0" text="Item Details" textAlignment="CENTER" textFill="#220dd9">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="item" prefHeight="30.0" prefWidth="200.0" promptText="Itemname">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="categ" prefHeight="21.0" prefWidth="160.0" promptText="Category">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="price" promptText="Price">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="quantity" promptText="Quantity">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Displaydata" prefHeight="30.0" prefWidth="154.0" text="Display" textAlignment="CENTER" textFill="#0fd406">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.600000381469727" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#InsertData" prefHeight="30.0" prefWidth="155.0" text="Insert" textFill="#0cd406">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.6" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Delete" prefHeight="30.0" prefWidth="155.0" text="Delete" textFill="#0fd406">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.600000381469727" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="158.0" text="Update" textAlignment="CENTER" textFill="#0fd406">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.6" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
